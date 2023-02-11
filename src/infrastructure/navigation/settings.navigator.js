@@ -5,13 +5,10 @@ import {
   CardStyleInterpolators,
 } from "@react-navigation/stack";
 import { SettingsScreen } from "../../features/settings/screen/settings.screen";
-import { Text } from "react-native";
+import { FavoutitesScreen } from "../../features/settings/screen/favourites.screen";
 
 const SettingsStack = createStackNavigator();
 
-const Fav = () => {
-  return <Text>hi</Text>;
-};
 export const SettingsNavigator = ({ route, navigation }) => {
   return (
     <SettingsStack.Navigator
@@ -22,10 +19,10 @@ export const SettingsNavigator = ({ route, navigation }) => {
     >
       <SettingsStack.Screen
         options={{ header: () => null }}
-        name={"setting"}
+        name={"Settings"}
         component={SettingsScreen}
       />
-      <SettingsStack.Screen name={"favourites"} component={Fav} />
+      <SettingsStack.Screen name={"Favourites"} component={FavoutitesScreen} />
     </SettingsStack.Navigator>
   );
 };
